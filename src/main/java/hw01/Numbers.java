@@ -13,6 +13,7 @@ public class Numbers {
         Scanner scanner = new Scanner(in);
 
         String askName = "What is your name?";
+        String emptyName = "Name cannot be empty. Please try again.";
         String startText = "Let the game begin!";
         String taskText = "Your number is:";
         String invalidInput = "Invalid input. Please enter a valid number.";
@@ -22,8 +23,16 @@ public class Numbers {
 
         int secretNumber = new Random().nextInt(101);
 
-        out.println(askName);
-        String name = scanner.nextLine();
+        String name = "";
+
+        while (name.isBlank()) {
+            out.println(askName);
+            name = scanner.nextLine();
+
+            if (name.isBlank()) {
+                out.printf("%s\n", emptyName);
+            }
+        }
 
         out.printf("%s\n", startText);
 

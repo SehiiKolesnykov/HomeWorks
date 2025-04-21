@@ -15,6 +15,7 @@ public class Quiz {
         Random random = new Random();
 
         String askName = "What is your name?";
+        String emptyName = "Name cannot be empty. Please try again.";
         String startText = "Let the game begin!";
         String taskText = "Guess the year:";
         String invalidInput = "Invalid input. Please enter a valid number.";
@@ -37,8 +38,16 @@ public class Quiz {
         int secretYear = (int) events[eventIndex][0];
         String eventQuestion = (String) events[eventIndex][1];
 
-        out.println(askName);
-        String name = scanner.nextLine();
+        String name = "";
+
+        while (name.isBlank()) {
+            out.println(askName);
+            name = scanner.nextLine();
+
+            if (name.isBlank()) {
+                out.println(emptyName);
+            }
+        }
 
         out.println(startText);
         out.println(eventQuestion);
