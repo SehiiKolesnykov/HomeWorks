@@ -10,7 +10,7 @@ public class TargetShooting {
     static Scanner scanner = new Scanner(System.in);
 
     static int fieldSize = 5;
-    static int targetSize = 5;
+    static int targetSize = 3;
     static int hits;
 
     static int target = 1;
