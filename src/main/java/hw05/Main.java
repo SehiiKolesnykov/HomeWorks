@@ -9,11 +9,6 @@ public class Main {
     private static final String petTypeError = "Invalid pet type: ";
     private static final String humanTypeError = "Invalid human type: ";
 
-    @FunctionalInterface
-    interface Action<T> {
-        void apply(T t);
-    }
-
     public static void main(String[] args) {
 
         Human mother = createHuman("mother", null);
@@ -195,12 +190,6 @@ public class Main {
 
     private static void printHumanInfo(Human human) {
         out.println("Human info: " + human);
-    }
-
-    private static <T> void processArray (T[] array, Action<T> action) {
-        for (T item : array) {
-            action.apply(item);
-        }
     }
 
     private static void demonstrateHumanMethods (Human human) {

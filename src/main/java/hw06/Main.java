@@ -8,10 +8,6 @@ import java.io.PrintStream;
 public class Main {
     static final PrintStream out = System.out;
 
-    @FunctionalInterface
-    interface Action<T> {
-        void apply(T t);
-    }
     public static void main(String[] args) {
 
         Man father = (Man) createHuman("father");
@@ -85,12 +81,6 @@ public class Main {
 
     private static void printHumanInfo(Human human) {
         out.printf(Texts.humanInfoText, human);
-    }
-
-    private static <T> void processArray (T[] array, Action<T> action) {
-        for (T item : array) {
-            action.apply(item);
-        }
     }
 
     private static void demonstrateHumanMethods (Human human) {
