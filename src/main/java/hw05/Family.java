@@ -1,6 +1,5 @@
 package hw05;
 
-
 import java.io.PrintStream;
 import java.util.Objects;
 
@@ -77,15 +76,6 @@ public class Family {
     public int countChildren() { return children.length; }
 
     public int countFamily() { return 2 + children.length; }
-
-    @Override
-    protected void finalize() throws Throwable {
-        try {
-            out.println("Finalize Family: " + this.toString());
-        } finally {
-            super.finalize();
-        }
-    }
 
     @Override
     public String toString() {
