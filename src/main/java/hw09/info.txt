@@ -1,0 +1,20 @@
+Міні проєкт "Щаслива родина" (продовження)
+
+Суть проєкту: опис структури сім'ї з урахуванням того, що кожна людина має кровних родичів,
+а склад сім'ї може з часом змінюватися.
+
+Основні нововведення Java 8 – lambda, stream
+
+Завдання
+
+Удоскональте проєкт: у проєкті реалізуйте можливості Java 8.
+
+
+Технічні вимоги:
+Зробіть рефакторинг класів FamilyService так, щоб вони використали можливості Java 8.
+Рефакторингу підлягають наступні методи:
+displayAllFamilies();
+getFamiliesBiggerThan(int count);
+getFamiliesLessThan(int count);
+countFamiliesWithMemberNumber;
+deleteAllChildrenOlderThan;
