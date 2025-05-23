@@ -38,8 +38,8 @@ public class FamilyController {
         out.printf("\nAvailable commands:");
         out.printf("\n1. Fill with test data");
         out.printf("\n2. Display all families");
-        out.printf("\n3. Display families with member more then than");
-        out.printf("\n4. Display families with member less then than");
+        out.printf("\n3. Display families with member more then");
+        out.printf("\n4. Display families with member less then");
         out.printf("\n5. Count families with exact number of members");
         out.printf("\n6. Create new family");
         out.printf("\n7. Delete family by index");
