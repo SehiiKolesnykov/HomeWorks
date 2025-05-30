@@ -6,8 +6,9 @@ public class Main {
         FamilyDao familyDao = new  CollectionFamilyDao();
         FamilyService familyService = new FamilyService(familyDao);
         FamilyController controller = new FamilyController(familyService);
+        Menu menu = new Menu(controller);
 
-        controller.run();
+        menu.run();
     }
 
 }
